@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+
+}
+*::selection{
+    background-color: transparent;
+}
+input[type='text']::selection{
+    background-color: rgb(0, 234, 255);
+
+}
+body{
+    height: 100vh;
+    background-color: #313131;
+    color: white;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+.wrapper{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.wrapper *{
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+}
+.wrapper button{
+    padding: 2px;
+    font-size: 20px;
+    background-color: #1e1e1e;
+    color: gold;
+    border: 1px solid rgb(154, 131, 3);
+}
+.wrapper input{
+    outline: none;
+    opacity: 0.5;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1.5px solid rgb(255, 217, 0);
+    padding: 5px;
+}
+.tasks{
+    display: grid;
+    background-color: #1e1e1e;
+    width: 80vw;
+    padding: 10px;
+    grid-gap:20px;
+    border-radius: 15px;
+    grid-template-rows:min-content min-content;
+    transition: grid-template-rows 500ms;
+}
+.tasks h1{
+    justify-self: center;
+}
+ul{
+    overflow: hidden;
+    padding: 10px;
+    list-style: none;
+}
+li{
+    margin: 10px 0 10px 0;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.636);
+}
+li button{
+    color: red;
+    background-color: rgba(255, 0, 0, 0.3);
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 5px;
+}
+li input{
+    width: 20px;
+    height: 20px;
+    accent-color: gold;
+}
+label{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 400ms;
+}
+label:has(input:checked){
+    color: rgba(255, 255, 255, 0.22);
+    text-decoration: line-through;
+
+}
